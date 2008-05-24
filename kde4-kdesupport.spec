@@ -13,6 +13,7 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{snap}.tar.bz2
 # Source0-md5:	48d93173916bfaa95ea1eeda7577530c
 URL:		http://www.kde.org/
 BuildRequires:	clucene-core-devel >= 0.9.16a
+BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	kde4-kdelibs-devel >= %{version}
 BuildRequires:	libxml2-devel
@@ -23,8 +24,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Kde4 support packages including:
 - akonadi
+- automoc4
+- qimageblitz
 - soprano
-- automoc
+- strigi
+- taglib
 
 %package soprano
 Summary:	Soprano - Qt wrapper API to librdf
