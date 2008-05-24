@@ -12,6 +12,7 @@ Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{snap}.tar.bz2
 # Source0-md5:	48d93173916bfaa95ea1eeda7577530c
 URL:		http://www.kde.org/
+Patch0:		%{name}-lib64.patch
 BuildRequires:	clucene-core-devel >= 0.9.16a
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
@@ -143,6 +144,7 @@ Header files for tag qimageblitz.
 
 %prep
 %setup -q -n %{orgname}-%{snap}
+%patch0 -p0
 
 %build
 install -d build
