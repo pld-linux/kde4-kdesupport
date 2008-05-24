@@ -301,6 +301,7 @@ rm -rf $RPM_BUILD_ROOT
 %files automoc4
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/automoc4
+%dir %{_libdir}/automoc4
 %{_libdir}/automoc4/Automoc4Config.cmake
 %{_libdir}/automoc4/automoc4.files.in
 
