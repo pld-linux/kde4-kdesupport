@@ -27,7 +27,6 @@ Summary:	Soprano - Qt wrapper API to librdf
 Group:		X11/Applications
 Provides:	soprano
 Obsoletes:	soprano
-Conflicts:	soprano
 
 %description soprano
 Soprano (formally known as QRDF) is a library which provides a Qt
@@ -48,7 +47,6 @@ Summary:	Strigi desktop search
 Group:		X11/Applications
 Provides:	strigi
 Obsoletes:	strigi
-Conflicts:	strigi
 
 %description strigi
 Here are the main features of Strigi Desktop Search: very fast
@@ -78,7 +76,6 @@ Summary:	Akonadi
 Group:		X11/Applications
 Provides:	akonadi
 Obsoletes:	akonadi
-Conflicts:	akonadi
 
 %description akonadi
 Akonadi.
@@ -96,7 +93,6 @@ Summary:	A tag library for reading and editing audio meta data
 Group:		X11/Libraries
 Provides:	taglib
 Obsoletes:	taglib
-Conflicts:	taglib
 
 %description taglib
 A tag library needed for juk application which is part of
@@ -115,7 +111,6 @@ Summary:	Automoc4
 Group:		X11/Applications
 Provides:	kde4-automoc
 Obsoletes:	kde4-automoc
-Conflicts:	kde4-automoc
 
 %description automoc4
 Automoc4.
@@ -125,7 +120,6 @@ Summary:	QimageBlitz
 Group:		X11/Applications
 Provides:	qimageblitz
 Obsoletes:	qimageblitz
-Conflicts:	qimageblitz
 
 %description qimageblitz
 QimageBlitz.
