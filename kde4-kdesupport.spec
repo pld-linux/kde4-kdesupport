@@ -16,6 +16,7 @@ BuildRequires:	clucene-core-devel >= 0.9.16a
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	kde4-kdelibs-devel >= %{version}
+BuildRequires:	libraptor-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	redland-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
