@@ -12,9 +12,10 @@ Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{snap}.tar.bz2
 # Source0-md5:	48d93173916bfaa95ea1eeda7577530c
 URL:		http://www.kde.org/
-BuildRequires:	clucene-devel >= 0.9.16a
-BuildRequires:	exiv2-devel
+BuildRequires:	clucene-core-devel >= 0.9.16a
+BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	kde4-kdelibs-devel >= %{version}
+BuildRequires:	libxml2-devel
 BuildRequires:	redland-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
