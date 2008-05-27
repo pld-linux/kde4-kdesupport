@@ -3,9 +3,14 @@
 
 %define		snap	810529
 
+# define program version
+%define		sopranover	2.0.98
+%define		strigiver	0.5.9
+%define		akonadiver	0.81.0
+
 Summary:	Kde Support
 Name:		kde4-kdesupport
-Version:	4.0.74
+Version:	4.0.80
 Release:	0.%{snap}.1
 License:	GPL
 Group:		X11/Development/Tools
@@ -38,7 +43,7 @@ Kde4 support packages including:
 %package soprano
 Summary:	Soprano - Qt wrapper API to librdf
 Group:		X11/Applications
-Provides:	soprano
+Provides:	soprano = %{sopranover}
 Obsoletes:	soprano
 
 %description soprano
@@ -50,6 +55,7 @@ use different RDF storage implementations.
 %package soprano-devel
 Summary:	Header files for soprano
 Group:		Development/Libraries
+Provides:	soprano-devel = %{sopranover}
 Requires:	%{name}-soprano = %{version}-%{release}
 
 %description soprano-devel
@@ -58,7 +64,7 @@ Header files for soprano.
 %package strigi
 Summary:	Strigi desktop search
 Group:		X11/Applications
-Provides:	strigi
+Provides:	strigi = %{strigiver}
 Obsoletes:	strigi
 
 %description strigi
@@ -79,6 +85,7 @@ file crawled which allows for fast finding of duplicate files.
 %package strigi-devel
 Summary:	Header files for strigi
 Group:		Development/Libraries
+Provides:	strigi-devel = %{strigiver}
 Requires:	%{name}-strigi = %{version}-%{release}
 
 %description strigi-devel
@@ -87,7 +94,7 @@ Header files for strigi.
 %package akonadi
 Summary:	Akonadi
 Group:		X11/Applications
-Provides:	akonadi
+Provides:	akonadi = %{akonadiver}
 Obsoletes:	akonadi
 
 %description akonadi
@@ -96,6 +103,7 @@ Akonadi.
 %package akonadi-devel
 Summary:	Header files for akonadi
 Group:		Development/Libraries
+Provides:	akonadi-devel = %{akonadiver}
 Requires:	%{name}-akonadi = %{version}-%{release}
 
 %description akonadi-devel
@@ -114,6 +122,7 @@ kde4-kdemultimedia package.
 %package taglib-devel
 Summary:	Header files for tag library
 Group:		Development/Libraries
+Provides:	taglib-devel
 Requires:	%{name}-taglib = %{version}-%{release}
 
 %description taglib-devel
@@ -140,6 +149,7 @@ QimageBlitz.
 %package qimageblitz-devel
 Summary:	Header files for tag qimageblitz
 Group:		Development/Libraries
+Provides:	qimageblitz-devel
 Requires:	%{name}-qimageblitz = %{version}-%{release}
 
 %description qimageblitz-devel
