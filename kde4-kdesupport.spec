@@ -24,8 +24,9 @@ BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	java-sun-jre >= 1.6
 BuildRequires:	libraptor-devel
-BuildRequires:	libxslt-progs
 BuildRequires:	libxml2-devel
+BuildRequires:	libxslt-progs
+BuildRequires:	mysql-devel
 BuildRequires:	redland-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -54,8 +55,8 @@ use different RDF storage implementations.
 %package soprano-devel
 Summary:	Header files for soprano
 Group:		Development/Libraries
-Provides:	soprano-devel = %{sopranover}
 Requires:	%{name}-soprano = %{version}-%{release}
+Provides:	soprano-devel = %{sopranover}
 
 %description soprano-devel
 Header files for soprano.
@@ -84,8 +85,8 @@ file crawled which allows for fast finding of duplicate files.
 %package strigi-devel
 Summary:	Header files for strigi
 Group:		Development/Libraries
-Provides:	strigi-devel = %{strigiver}
 Requires:	%{name}-strigi = %{version}-%{release}
+Provides:	strigi-devel = %{strigiver}
 
 %description strigi-devel
 Header files for strigi.
@@ -102,8 +103,8 @@ Akonadi.
 %package akonadi-devel
 Summary:	Header files for akonadi
 Group:		Development/Libraries
-Provides:	akonadi-devel = %{akonadiver}
 Requires:	%{name}-akonadi = %{version}-%{release}
+Provides:	akonadi-devel = %{akonadiver}
 
 %description akonadi-devel
 Header files for akonadi.
@@ -121,8 +122,8 @@ kde4-kdemultimedia package.
 %package taglib-devel
 Summary:	Header files for tag library
 Group:		Development/Libraries
-Provides:	taglib-devel
 Requires:	%{name}-taglib = %{version}-%{release}
+Provides:	taglib-devel
 
 %description taglib-devel
 Header files for tag library.
@@ -148,8 +149,8 @@ QimageBlitz.
 %package qimageblitz-devel
 Summary:	Header files for tag qimageblitz
 Group:		Development/Libraries
-Provides:	qimageblitz-devel
 Requires:	%{name}-qimageblitz = %{version}-%{release}
+Provides:	qimageblitz-devel
 
 %description qimageblitz-devel
 Header files for tag qimageblitz.
