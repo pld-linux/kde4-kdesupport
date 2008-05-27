@@ -26,7 +26,6 @@ BuildRequires:	java-sun-jre >= 1.6
 BuildRequires:	libraptor-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-progs
-BuildRequires:	mysql-devel
 BuildRequires:	redland-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
