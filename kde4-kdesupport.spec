@@ -1,7 +1,7 @@
 %define		_state		snapshots
 %define	orgname		kdesupport
 
-%define		snap	810529
+%define		snap	813466
 
 # define program version
 %define		sopranover	2.0.98
@@ -15,7 +15,7 @@ Release:	0.%{snap}.1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{snap}.tar.bz2
-# Source0-md5:	48d93173916bfaa95ea1eeda7577530c
+# Source0-md5:	4a18b06c9bf1c02db3b45e98391b3ab8
 URL:		http://www.kde.org/
 Patch0:		%{name}-lib64.patch
 BuildRequires:	QtDBus-devel >= 4.4.0
