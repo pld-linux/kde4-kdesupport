@@ -147,7 +147,7 @@ Obsoletes:	qimageblitz
 QimageBlitz.
 
 %package qimageblitz-devel
-Summary:	Header files for tag qimageblitz
+Summary:	Header files for qimageblitz
 Group:		Development/Libraries
 Requires:	%{name}-qimageblitz = %{version}-%{release}
 Provides:	qimageblitz-devel
