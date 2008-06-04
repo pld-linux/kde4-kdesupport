@@ -153,7 +153,7 @@ Requires:	%{name}-qimageblitz = %{version}-%{release}
 Provides:	qimageblitz-devel
 
 %description qimageblitz-devel
-Header files for tag qimageblitz.
+Header files for qimageblitz.
 
 %package phonon
 Summary:	Phonon library
