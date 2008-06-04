@@ -11,7 +11,7 @@
 Summary:	Kde Support
 Name:		kde4-kdesupport
 Version:	4.0.81
-Release:	0.%{snap}.0.1
+Release:	0.%{snap}.1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{snap}.tar.bz2
@@ -156,11 +156,19 @@ Provides:	qimageblitz-devel
 Header files for tag qimageblitz.
 
 %package phonon
-Summary:	Phonon files
-Group:		Development/Libraries
+Summary:	Phonon library
+Group:		X11/Libraries
 
 %description phonon
-Phonon
+Phonon library.
+
+%package phonon-devel
+Summary:        Phonon files
+Group:          Development/Libraries
+
+%description phonon-devel
+Header files for phonon.
+
 
 %prep
 %setup -q -n %{orgname}-%{snap}
@@ -336,14 +344,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files phonon
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libphonon.so
 %attr(755,root,root) %{_libdir}/libphonon.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libphonon.so.?
-%attr(755,root,root) %{_libdir}/libphononexperimental.so
 %attr(755,root,root) %{_libdir}/libphononexperimental.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libphononexperimental.so.?
 %dir %{_datadir}/dbus-1/interfaces
 %{_datadir}/dbus-1/interfaces/org.kde.Phonon.AudioOutput.xml
+
+%files phonon-devel
+%defattr(644,root,root,755)
+%{_libdir}/libphonon.so
+%{_libdir}/libphononexperimental.so
 %{_includedir}/phonon
 %{_pkgconfigdir}/phonon.pc
 
