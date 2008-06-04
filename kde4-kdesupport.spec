@@ -1,21 +1,21 @@
 %define		_state		snapshots
 %define	orgname		kdesupport
 
-%define		snap	813466
+%define		snap	816468
 
 # define program version
-%define		sopranover	2.0.98
-%define		strigiver	0.5.9
+%define		sopranover	2.1
+%define		strigiver	0.5.10
 %define		akonadiver	0.81.0
 
 Summary:	Kde Support
 Name:		kde4-kdesupport
-Version:	4.0.80
-Release:	0.%{snap}.1
+Version:	4.0.81
+Release:	0.%{snap}.0.1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{snap}.tar.bz2
-# Source0-md5:	4a18b06c9bf1c02db3b45e98391b3ab8
+# Source0-md5:	7c7811974d9c3e25db707b1690f358c0
 URL:		http://www.kde.org/
 Patch0:		%{name}-lib64.patch
 BuildRequires:	QtDBus-devel >= 4.4.0
@@ -34,6 +34,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Kde4 support packages including:
 - akonadi
 - automoc4
+- phonon
 - qimageblitz
 - soprano
 - strigi
@@ -154,6 +155,13 @@ Provides:	qimageblitz-devel
 %description qimageblitz-devel
 Header files for tag qimageblitz.
 
+%package phonon
+Summary:	Phonon files
+Group:		Development/Libraries
+
+%description phonon
+Phonon
+
 %prep
 %setup -q -n %{orgname}-%{snap}
 %patch0 -p0
@@ -191,6 +199,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %post	taglib	-p /sbin/ldconfig
 %postun	taglib	-p /sbin/ldconfig
+
+%post	phonon	-p /sbin/ldconfig
+%postun	phonon	-p /sbin/ldconfig
 
 %post	qimageblitz	-p /sbin/ldconfig
 %postun	qimageblitz	-p /sbin/ldconfig
@@ -322,6 +333,19 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/automoc4
 %{_libdir}/automoc4/Automoc4Config.cmake
 %{_libdir}/automoc4/automoc4.files.in
+
+%files phonon
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libphonon.so
+%attr(755,root,root) %{_libdir}/libphonon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libphonon.so.?
+%attr(755,root,root) %{_libdir}/libphononexperimental.so
+%attr(755,root,root) %{_libdir}/libphononexperimental.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libphononexperimental.so.?
+%dir %{_datadir}/dbus-1/interfaces
+%{_datadir}/dbus-1/interfaces/org.kde.Phonon.AudioOutput.xml
+%{_includedir}/phonon
+%{_pkgconfigdir}/phonon.pc
 
 %files qimageblitz
 %defattr(644,root,root,755)
