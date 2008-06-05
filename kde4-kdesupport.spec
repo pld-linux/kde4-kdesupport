@@ -57,6 +57,7 @@ Summary:	Header files for soprano
 Group:		Development/Libraries
 Requires:	%{name}-soprano = %{version}-%{release}
 Provides:	soprano-devel = %{sopranover}
+Obsoletes:	soprano-devel
 
 %description soprano-devel
 Header files for soprano.
@@ -87,6 +88,7 @@ Summary:	Header files for strigi
 Group:		Development/Libraries
 Requires:	%{name}-strigi = %{version}-%{release}
 Provides:	strigi-devel = %{strigiver}
+Obsoletes:	strigi-devel
 
 %description strigi-devel
 Header files for strigi.
@@ -105,6 +107,7 @@ Summary:	Header files for akonadi
 Group:		Development/Libraries
 Requires:	%{name}-akonadi = %{version}-%{release}
 Provides:	akonadi-devel = %{akonadiver}
+Obsoletes:	akonadi-devel
 
 %description akonadi-devel
 Header files for akonadi.
@@ -124,6 +127,7 @@ Summary:	Header files for tag library
 Group:		Development/Libraries
 Requires:	%{name}-taglib = %{version}-%{release}
 Provides:	taglib-devel
+Obsoletes:	taglib-devel
 
 %description taglib-devel
 Header files for tag library.
@@ -151,6 +155,7 @@ Summary:	Header files for qimageblitz
 Group:		Development/Libraries
 Requires:	%{name}-qimageblitz = %{version}-%{release}
 Provides:	qimageblitz-devel
+Obsoletes:	qimageblitz-devel
 
 %description qimageblitz-devel
 Header files for qimageblitz.
@@ -158,6 +163,8 @@ Header files for qimageblitz.
 %package phonon
 Summary:	Phonon library
 Group:		X11/Libraries
+Provides:	qt4-phonon
+Obsoletes:	qt4-phonon
 
 %description phonon
 Phonon library.
@@ -165,6 +172,10 @@ Phonon library.
 %package phonon-devel
 Summary:        Phonon files
 Group:          Development/Libraries
+Requires:	kde4-kdesupport-phonon
+Requires:	kde4-kdelibs-devel
+Provides:	qt4-phonon-devel
+Obsoletes:	qt4-phonon-devel
 
 %description phonon-devel
 Header files for phonon.
@@ -356,6 +367,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libphonon.so
 %{_libdir}/libphononexperimental.so
 %{_includedir}/phonon
+%{_includedir}/KDE/Phonon
 %{_pkgconfigdir}/phonon.pc
 
 %files qimageblitz
