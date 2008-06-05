@@ -23,6 +23,7 @@ BuildRequires:	clucene-core-devel >= 0.9.16a
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
 BuildRequires:	java-sun-jre >= 1.6
+BuildRequires:	libgcj-devel
 BuildRequires:	libraptor-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-progs
