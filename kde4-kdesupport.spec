@@ -186,6 +186,11 @@ Header files for phonon.
 %setup -q -n %{orgname}-%{snap}
 %patch0 -p0
 
+# Sesame2 backend doesn't really use the new JNI-1.6 feature -> GetObjectRefType.
+sed -i 's:JNI_VERSION_1_6:JNI_VERSION_1_4:g' soprano/CMakeLists.txt
+# cleanup.
+sed -i 's:${JAVA_INCLUDE_PATH2}::' soprano/backends/sesame2/CMakeLists.txt
+
 %build
 install -d build
 cd build
@@ -194,7 +199,10 @@ cd build
 %if "%{_lib}" == "lib64"
 	-DLIB_SUFFIX=64 \
 %endif
-	../
+	-DJAVA_INCLUDE_PATH=%{_libdir}/gcc/%{_target_platform}/%(%{__cc} -dumpversion)/include \
+	-DJAVA_JVM_LIBRARY=%{_libdir}/gcj-%(%{__cc} -dumpversion)/libjvm.so \
+	..
+
 %{__make}
 
 %install
