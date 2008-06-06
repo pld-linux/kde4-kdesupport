@@ -275,7 +275,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files strigi
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/strigiclient
+%attr(755,root,root) %{_bindir}/strigicmd
+%attr(755,root,root) %{_bindir}/strigidaemon
 %attr(755,root,root) %{_libdir}/libsearchclient.so.*.*.*
 %attr(755,root,root) %{_libdir}/libstreamanalyzer.so.*.*.*
 %attr(755,root,root) %{_libdir}/libstreams.so.*.*.*
