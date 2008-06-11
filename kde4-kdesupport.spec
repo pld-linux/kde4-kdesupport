@@ -1,7 +1,7 @@
 %define		_state		snapshots
 %define	orgname		kdesupport
 
-%define		snap	816468
+%define		snap	819117
 
 # define program version
 %define		sopranover	2.1
@@ -10,18 +10,19 @@
 
 Summary:	Kde Support
 Name:		kde4-kdesupport
-Version:	4.0.81
+Version:	4.0.82
 Release:	0.%{snap}.1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{snap}.tar.bz2
-# Source0-md5:	7c7811974d9c3e25db707b1690f358c0
+# Source0-md5:	ae6b178cdd4c977ccc5190edf8a89245
 URL:		http://www.kde.org/
 Patch0:		%{name}-lib64.patch
 BuildRequires:	QtDBus-devel >= 4.4.0
 BuildRequires:	clucene-core-devel >= 0.9.16a
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
+BuildRequires:	gstreamer-plugins-base
 BuildRequires:	java-sun-jre >= 1.6
 BuildRequires:	libgcj-devel
 BuildRequires:	libraptor-devel
@@ -370,8 +371,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libphonon.so.?
 %attr(755,root,root) %{_libdir}/libphononexperimental.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libphononexperimental.so.?
+%attr(755,root,root) %{_libdir}/kde4/plugins/phonon_backend/phonon_gstreamer.so
 %dir %{_datadir}/dbus-1/interfaces
 %{_datadir}/dbus-1/interfaces/org.kde.Phonon.AudioOutput.xml
+%{_datadir}/kde4/services/phononbackends/gstreamer.desktop
 
 %files phonon-devel
 %defattr(644,root,root,755)
