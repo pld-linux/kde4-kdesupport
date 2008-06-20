@@ -19,6 +19,7 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{snap}.tar.bz2
 URL:		http://www.kde.org/
 Patch0:		%{name}-lib64.patch
 BuildRequires:	QtDBus-devel >= 4.4.0
+BuildRequires:	QtOpenGL-devel >= 4.4.0
 BuildRequires:	clucene-core-devel >= 0.9.16a
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
