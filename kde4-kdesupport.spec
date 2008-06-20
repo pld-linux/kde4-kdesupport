@@ -29,7 +29,7 @@ BuildRequires:	libraptor-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-progs
 BuildRequires:	redland-devel
-BuildRequires:	shared-mimo-info
+BuildRequires:	shared-mime-info
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
