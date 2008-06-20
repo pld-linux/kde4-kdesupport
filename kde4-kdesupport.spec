@@ -32,6 +32,7 @@ BuildRequires:	libxslt-progs
 BuildRequires:	redland-devel
 BuildRequires:	shared-mime-info
 BuildRequires:	rpmbuild(macros) >= 1.129
+Requires:	dbus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
