@@ -23,7 +23,7 @@ BuildRequires:	QtOpenGL-devel >= 4.4.0
 BuildRequires:	clucene-core-devel >= 0.9.16a
 BuildRequires:	cmake
 BuildRequires:	exiv2-devel >= 0.12
-BuildRequires:	gstreamer-plugins-base
+BuildRequires:	gstreamer-plugins-base-devel >= 0.10.0
 BuildRequires:	java-sun-jre >= 1.6
 BuildRequires:	libgcj-devel
 BuildRequires:	libraptor-devel
